@@ -18,5 +18,13 @@ async def on_message(message):
             m = "おはようございます" + message.author.name + "さん！"
             await message.channel.send(m)
 
-
+@client.event
+async def on_message(message):
+    if message.content.startswith("おやすみ"):
+        if client.user != message.author:
+            m = "おやすみなさい" + message.author.name + "さん！"
+            await message.channel.send(m)
+            
+            
+            
 client.run("000000000000")
