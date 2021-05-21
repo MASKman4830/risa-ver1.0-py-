@@ -27,4 +27,14 @@ async def on_message(message):
             
             
             
-client.run("000000000000")
+# load token
+print("Loading bottoken.txt")
+file = open('bottoken.txt', 'r', encoding='UTF-8')
+token = file.read()
+file.close()
+print("Loaded bottoken.txt")
+
+print(token)
+
+# bot ready
+client.run(token)
