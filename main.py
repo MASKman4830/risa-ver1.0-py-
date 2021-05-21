@@ -25,8 +25,7 @@ async def on_message(message):
             m = "おやすみなさい" + message.author.name + "さん！"
             await message.channel.send(m)
             
-            
-            
+         
 # load token
 print("Loading bottoken.txt")
 file = open('bottoken.txt', 'r', encoding='UTF-8')
